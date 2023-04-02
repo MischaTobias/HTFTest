@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "50af4910-314b-4279-8f2c-5d7ad0d685bc",
+		"name": "HackTheFuture",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12458680"
+	},
+	"item": [
+		{
+			"name": "Categorías combustible",
+			"item": [
+				{
+					"name": "Obtener categorías de combustible",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5183/ConsumptionType",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5183",
+							"path": [
+								"ConsumptionType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear nueva categoría de combustible",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Prueba nueva\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5183/ConsumptionType",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5183",
+							"path": [
+								"ConsumptionType"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tipos de emisión",
+			"item": [
+				{
+					"name": "Obtener tipos de emisión",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5183/EmissionType",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5183",
+							"path": [
+								"EmissionType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear nuevo tipo de emisión",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Prueba también\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5183/EmissionType",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5183",
+							"path": [
+								"EmissionType"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consumo combustible",
+			"item": [
+				{
+					"name": "Crear nuevo registro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"gallonQuantity\": 109.89,\r\n  \"consumptionTypeId\": 2,\r\n  \"emissionTypeId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5183/FuelConsumption",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5183",
+							"path": [
+								"FuelConsumption"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar cantidad de consumo",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": 2,\r\n    \"gallonQuantity\": 50.56\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5183/FuelConsumption",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5183",
+							"path": [
+								"FuelConsumption"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consumo energía eléctrica",
+			"item": [
+				{
+					"name": "Crear nuevo registro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"KwQuantity\": 884,\r\n  \"consumptionTypeId\": 1,\r\n  \"emissionTypeId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5183/ElectricEnergyConsumption",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5183",
+							"path": [
+								"ElectricEnergyConsumption"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar cantidad de consumo",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": 1,\r\n    \"KwQuantity\": 98\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5183/ElectricEnergyConsumption",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5183",
+							"path": [
+								"ElectricEnergyConsumption"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consumo derivados de pretróleo",
+			"item": [
+				{
+					"name": "Actualizar cantidad de consumo",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": 1,\r\n    \"Quantity\": 92\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5183/PetrolDerivedConsumption",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5183",
+							"path": [
+								"PetrolDerivedConsumption"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear nuevo registro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Quantity\": 10,\r\n  \"consumptionTypeId\": 3,\r\n  \"emissionTypeId\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5183/PetrolDerivedConsumption",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5183",
+							"path": [
+								"PetrolDerivedConsumption"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Número de viajes",
+			"item": [
+				{
+					"name": "Actualizar número de viajes",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\": 1,\r\n    \"Count\": 12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5183/TripCount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5183",
+							"path": [
+								"TripCount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear nuevo registro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Count\": 8,\r\n  \"emissionTypeId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5183/TripCount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5183",
+							"path": [
+								"TripCount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
